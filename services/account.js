@@ -18,27 +18,7 @@ const typeDefs = gql`
   }
 `;
 
-const resolvers = {
-  Account: {
-    __resolveReference(object) {
-      const { id } = object
-      return { id }
-    }
-  },
-  AccountSettings: {
-    relatedAccounts(parent, {}, {}) {
-      return [{id: 3}]
-    }
-  },
-  Query: {
-    accounts(parent, {}, {}) {
-      return [
-          {id: 42},
-          {id: 2020}
-      ]
-    }
-  }
-};
+const resolvers = {};
 
 module.exports = {
   typeDefs,
