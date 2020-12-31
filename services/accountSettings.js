@@ -6,6 +6,7 @@ const typeDefs = gql`
   }
 
   extend type Account @key(fields: "id") {
+    id: ID! @external
     settings: AccountSettings!
   }
 `;

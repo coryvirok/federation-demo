@@ -9,6 +9,7 @@ const typeDefs = gql`
     # This @external causes the GraphQL parser to halt with
     # https://github.com/apollographql/apollo-server/issues/4378
     account: Account! @external
+
     relatedAccounts: [Account]!
   }
 
